@@ -1,0 +1,10 @@
+<%= provide(:title, 'New Schedule') %>
+
+<h1>create schedule</h1>
+
+<%= form_for(@schedule) do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.submit "Create new Schedule" %>
+<% end %>

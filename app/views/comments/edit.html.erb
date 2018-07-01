@@ -1,0 +1,17 @@
+<%= provide(:title, "Edit Comments") %>
+<h1>Comments</h1>
+
+<%= form_for(@important_job) do |f| %>
+  <%＝f.label :content %>
+  <%= f.text_field :content %>
+ <%= form.fields_for @achieve_todo do |g| %>
+  <%= g.label :content %>
+  <%= g.text_field :content %>
+ <%= form.fields_for @achieve_good do |h| %>
+  <%= h.label :content %>
+  <%= h.text_field :content %>
+ <%= form.fields_for @reflection_point do |i| %>
+  <%= i.label :content %>
+  <%= i.text_field :content %>
+ <%= f.submit "Create new Comments" %>
+<% end %>

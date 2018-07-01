@@ -1,0 +1,21 @@
+<%= provide(:title, "Create Comments") %>
+<h1>Create Comments</h1>
+
+<%= form_for(@important_job) do |f| %>
+  <%= f.label :ImportantJob %>
+  <%= f.text_field :content %>
+  <%= fields_for @achieve_todo do |achieve_todo| %>
+    <%= achieve_todo.label :"Achieve To do" %>
+    <%= achieve_todo.text_field :content %>
+  <% end %>
+  <%= fields_for @achieve_good do |achieve_good| %>
+    <%= achieve_good.label :"Achieve Good" %>
+    <%= achieve_good.text_field :content %>
+  <% end %>
+  <%= fields_for @reflection_point do |reflection_point| %>
+    <%= reflection_point.label :"Reflection Point" %>
+    <%= reflection_point.text_field :content %>
+  <% end %>
+
+  <%= f.submit "Create new Comments" %>
+<% end %>
